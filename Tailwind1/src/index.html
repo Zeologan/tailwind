@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN (v6) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="p-3 flex bg-white justify-between items-center">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img src="../assets/logo.png" alt="" class="size-12 object-cover max-w-12 max-h-12">
+            <span class="text-lg font-medium">ToDesktop</span>
+        </a>
+
+        <div id="nav-menu" class="hidden gap-12 md:flex">
+            <a href="#" class="font-medium hover:text-blue-500">Pricing</a>
+            <a href="#" class="font-medium hover:text-blue-500">Docs</a>
+            <a href="#" class="font-medium hover:text-blue-500">Changelog</a>
+            <a href="#" class="font-medium hover:text-blue-500">Blogs</a>
+            <a href="#" class="font-medium hover:text-blue-500">Login</a>
+        </div>
+        <button
+            class="hidden lg:flex gap-1 items-center border border-gray-300 px-6 py-2 rounded-lg hover:border-gray-600">
+            <img src="../assets/atom.png" alt="" class="size-5">
+            <span>Electron Developer</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-dailog" class="fixed z-10 md:hidden bg-white inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                    <img src="../assets/logo.png" alt="" class="size-12 object-cover max-w-12 max-h-12">
+                    <span class="text-lg font-medium">ToDesktop</span>
+                </a>
+
+                <button class="p-2 md:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="p-3 m-3 font-medium hover:bg-gray-200 rounded-lg block">Pricing</a>
+                <a href="#" class="p-3 m-3 font-medium hover:bg-gray-200 rounded-lg block">Docs</a>
+                <a href="#" class="p-3 m-3 font-medium hover:bg-gray-200 rounded-lg block">Changelog</a>
+                <a href="#" class="p-3 m-3 font-medium hover:bg-gray-200 rounded-lg block">Blogs</a>
+                <a href="#" class="p-3 m-3 font-medium hover:bg-gray-200 rounded-lg block">Login</a>
+            </div>
+
+            <div class="h-[1px] bg-gray-200"></div>
+            <button class="w-full mt-6 flex gap-1 items-cente px-6 py-4 rounded-lg hover:border-gray-50">
+                <img src="../assets/atom.png" alt="" class="size-5">
+                <span>Electron Developer</span>
+            </button>
+        </div>
+    </nav>
+</body>
+<script>
+
+    const navDailog = document.getElementById('nav-dailog')
+    function handleMenu() {
+        navDailog.classList.toggle('hidden');
+    }
+</script>
+
+</html>
