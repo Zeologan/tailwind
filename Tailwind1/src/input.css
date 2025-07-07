@@ -16,4 +16,13 @@
     .big-box{
         @apply row-start-3 row-end-6
     }
+    .anchor-hover{
+        @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500
+    }
+    .gradiant-hover-outer{
+        @apply p-[1px] bg-slate-200 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200
+    }
+    .gradiant-hover-inner{
+        @apply bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 hover:to-yellow-50
+    }
 }
